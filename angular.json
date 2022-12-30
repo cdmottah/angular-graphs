@@ -102,6 +102,40 @@
           }
         }
       }
+    },
+    "angular-graph": {
+      "projectType": "library",
+      "root": "projects/angular-graph",
+      "sourceRoot": "projects/angular-graph/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/angular-graph/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular-graph/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/angular-graph/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-graph/src/test.ts",
+            "tsConfig": "projects/angular-graph/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-graph/karma.conf.js"
+          }
+        }
+      }
     }
+  },
+  "cli": {
+    "analytics": "f3603e26-be76-45d1-858f-8cc557984adc"
   }
 }
