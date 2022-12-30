@@ -1,0 +1,25 @@
+.graph {
+  display: grid;
+  grid-template-columns: min-content;
+  grid-template-rows: min-content;
+  width: min-content;
+  padding: 1em 1em 0.5em 0em;
+  border: 1px solid black;
+  border-radius: 1em;
+
+  .graph-legend{
+    align-self: center;
+    color: gray;
+    font-size: 1.2em;
+  }
+  .x-legend{
+    grid-column: 2/3;
+    justify-self: center;
+  }
+  .y-legend{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    transform: rotate(270deg);
+    transform-origin: top;
+  }
+}
